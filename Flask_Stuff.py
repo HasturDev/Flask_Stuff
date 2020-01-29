@@ -4,8 +4,7 @@ import matplotlib
 
 # add functions here for testing
 def integer_thingy():
-    for i in range(5):
-        return i
+
 
 app = Flask(__name__)
 
@@ -15,7 +14,7 @@ def hello():
 
 @app.route("/functions")
 def functions():
-    return '<h1>Your Integers are {}</h1>'.format(integer_thingy())
+    return Functions.html
 
 
 if __name__ == '__main__':
