@@ -6,9 +6,7 @@ import Index.html as startpage
 
 # add functions here for testing
 def integer_thingy():
-
-
-app = Flask(__name__)
+ app = Flask(__name__)
 
 @app.route("/")
 def hello():
