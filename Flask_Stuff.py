@@ -1,21 +1,10 @@
-from flask import Flask
-import nltk
-import matplotlib
-import Functions.html as funcpage
-import Index.html as startpage
+from flask import Flask, render_template
 
-# add functions here for testing
-def integer_thingy():
- app = Flask(__name__)
+app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return startpage
-
-@app.route("/functions")
-def functions():
-    return funcpage
-
+def template_test():
+    return render_template('template.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5])
 
 if __name__ == '__main__':
     app.run(debug=True)
