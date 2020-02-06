@@ -2,8 +2,8 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-sender_email = "HasturDev@gmail.com"
-receiver_email = "HasturDev@gmail.com"
+sender_email = "hasturDev@gmail.com"
+receiver_email = "hasturDev@gmail.com"
 password = input("Type your password and press enter:")
 
 message = MIMEMultipart("alternative")
@@ -21,8 +21,8 @@ html = """\
   <body>
     <p>Hi,<br>
        Thank you for subscribing to the email list<br>
-       <a href="https://realpython.com/python-send-email/">The base tutorial that I used is here</a> 
-       Learning more constantly that will allow me to better myself and my code.
+       <a href="https://realpython.com/python-send-email/">The base tutorial that I used is here</a> <br>
+       Learning more constantly that will allow me to better myself and my code.<br>
     </p>
   </body>
 </html>
