@@ -1,8 +1,3 @@
 In order to run this program you will need python 3.7+ and an up to date version of flask
 If you do not have these things then download python at https://www.python.org/downloads/
 Once downloaded use the command "pip install flask" in your command prompt in order to gain flask
-
-Currently working on this project 1-2 hours a day in order to learn how to build a front end of some kind
-I have absolutely no idea how this is going to play out, so if you have any suggestions feel free to contact me at
-https://www.linkedin.com/in/ian-mizer-039843155/
-https://github.com/lecherouscthulhu
