@@ -18,25 +18,26 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h3>Column 1</h3>
+      <h3>Some Latin</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
     <div class="col-sm-4">
-      <h3>Column 2</h3>
+      <h3>Some Information</h3>
       <p>Gonna change all this stuff when i better understand it</p>
       <p>left the latin thingy up there just because</p>
     </div>
     <div class="col-sm-4">
-      <h3>Column 3</h3>
+      <h3>More Information</h3>
       <p>Replacing more latin stuff with other stuff to learn more</p>
       <p>Hopefully can apply this to the flask application to better understand it</p>
     </div>
     <div>
       <form method="POST" action="/">
         {{ form.csrf_token }}
-        {{ form.name.label }} {{ form.name(size=20) }}
-        <input type="submit" value="Go">
+        {{ form.user_name.label }} {{ form.user_name(size=20) }}
+        {{ form.user_email.label }} {{ form.user_email(size=20) }}
+        {{ form.submit }}
       </form>
     </div>
   </div>
