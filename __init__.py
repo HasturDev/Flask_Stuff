@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms.validators import DataRequired
@@ -17,6 +17,10 @@ app.config.from_mapping(
     )
 csrf = CSRFProtect()
 
+@app.route('/congratulations', methods=('GET', 'POST'))
+def congratulations():
+    return render_template('congratulations.html')
+
 @app.route('/', methods=('GET', 'POST'))
 def contact():
     csrf.init_app(app)
@@ -26,12 +30,9 @@ def contact():
         Name_data = form.user_name.data
         Email_response.receiver_email = Email_data
         Email_response
-        return redirect('/Congratulations')
+        return redirect('/congratulations')
     return render_template('Bootstrappin.html', form=form)
 
-@app.route('/Congratulations', methods=('GET', 'POST'))
-def congratulations():
-    return render_template('congratulations.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

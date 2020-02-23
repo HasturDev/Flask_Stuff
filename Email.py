@@ -7,7 +7,7 @@ class Email_response:
 
     # required data for email
     sender_email = "hasturDev@gmail.com"
-    receiver_email = "hasturDev@gmail.com"
+    receiver_email = "flaminwarnecro@gmail.com"
     password = ""
 
     message = MIMEMultipart("alternative")
