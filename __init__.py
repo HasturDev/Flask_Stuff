@@ -28,8 +28,7 @@ def contact():
     if form.validate_on_submit():
         Email_data = form.user_email.data
         Name_data = form.user_name.data
-        Email_response.receiver_email = Email_data
-        Email_response
+        Email_response(form.user_email.data)
         return redirect('/congratulations')
     return render_template('Bootstrappin.html', form=form)
 

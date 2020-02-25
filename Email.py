@@ -1,13 +1,13 @@
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from forms import ContactForm
 
-class Email_response:
 
-
+def Email_response(n):
     # required data for email
     sender_email = "hasturDev@gmail.com"
-    receiver_email = "flaminwarnecro@gmail.com"
+    receiver_email = n
     password = ""
 
     message = MIMEMultipart("alternative")
@@ -52,7 +52,6 @@ class Email_response:
     message.attach(part2)
 
     # Create secure connection with server and send email
-
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(sender_email, password)
