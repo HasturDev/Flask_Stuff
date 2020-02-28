@@ -12,7 +12,7 @@ from db import Database
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_mapping(
         TESTING=True,
-        SECRET_KEY='onetwo34fif!',
+        SECRET_KEY='',
         DATABASE=os.path.join(app.instance_path, 'venv.sqlite')
     )
 csrf = CSRFProtect()
