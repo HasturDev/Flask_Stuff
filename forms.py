@@ -6,4 +6,5 @@ class ContactForm(FlaskForm):
     """Contact form."""
     user_name = StringField('Name', [DataRequired(),Length(min=4, message=('Your message is too short.'))])
     user_email = StringField('Email', [DataRequired(),Length(min=4, message=('Your message is too short.'))])
+    user_password = StringField('Password', [DataRequired(), Length(min=4, message=('Your Password is too short.'))])
     submit = SubmitField('Submit')

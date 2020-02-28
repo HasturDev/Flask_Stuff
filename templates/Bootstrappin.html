@@ -18,9 +18,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h3>Some Latin</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <h3>Enter Your information</h3>
+      <p>Currently the information is not stored in a secure way so ya</p>
+      <p>Enjoy the threat that could cause to your person and plan accordingly</p>
     </div>
     <div class="col-sm-4">
       <h3>Some Information</h3>
@@ -35,8 +35,9 @@
     <div>
       <form method="POST" action="/">
         {{ form.csrf_token }}
-        {{ form.user_name.label }} {{ form.user_name(size=20) }}
-        {{ form.user_email.label }} {{ form.user_email(size=20) }}
+        <div>{{ form.user_name.label }} {{ form.user_name(size=20) }}</div>
+        <div>{{ form.user_email.label }} {{ form.user_email(size=20) }}</div>
+        <div>{{ form.user_password.label }} {{ form.user_password(size=20) }}</div>
         {{ form.submit }}
       </form>
     </div>
